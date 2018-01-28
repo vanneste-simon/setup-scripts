@@ -25,6 +25,6 @@ cp ~/.bashrc ~/.bachrc-org
 printf '\n%s\n%s\n%s' '# virtualenv' 'export WORKON_HOME=~/virtualenvs' \
 	'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
-exec "$BASH"
+. ~/.bashrc
 
 echo "done"

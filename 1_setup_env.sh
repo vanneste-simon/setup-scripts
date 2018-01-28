@@ -47,6 +47,6 @@ add_alias "alias merge=\"git merge\""
 add_alias "alias r=\"ranger\""
 add_alias "alias py=\"python3\""
 
-exec "$BASH"
+. ~/.bashrc
 
 echo "done"

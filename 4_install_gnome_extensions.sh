@@ -15,6 +15,10 @@ sudo apt-get install caffeine -y
 sudo apt-get install my-weather-indicator -y
 
 # install multiload
-sudo apt-get install indicator-multiload
+sudo apt-get install indicator-multiload -y
+
+# remove PPA
+sudo add-apt-repository --remove ppa:eugenesan/ppa -y
+sudo add-apt-repository --remove ppa:atareao/atareao -y
 
 echo "done"

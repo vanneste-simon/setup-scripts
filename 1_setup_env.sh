@@ -39,7 +39,7 @@ add_alias "alias s=\"git status\""
 add_alias "alias aa=\"git add --all\""
 add_alias "alias c=\"git commit -m\""
 add_alias "alias pull=\"git pull\""
-add_alias "alias push=\"git pull & git push -u\""
+add_alias "alias push=\"git pull && git push -u\""
 add_alias "alias merge=\"git merge\""
 add_alias "alias r=\"ranger\""
 

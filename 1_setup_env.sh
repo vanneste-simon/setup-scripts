@@ -20,17 +20,9 @@ sudo apt-get install gparted -y
 sudo apt-get install tmux -y
 cp config/.tmux.config ~/.tmux.config
 
-
-
-
-
-
-
-
-
-
-
-
+# install ranger
+sudo apt-get install ranger caca-utils highlight atool w3m poppler-utils mediainfo -y
+cp -r config/ranger ~/.config
 
 # setup the aliases
 touch ~/.bash_aliases
@@ -49,8 +41,7 @@ add_alias "alias c=\"git commit -m\""
 add_alias "alias pull=\"git pull\""
 add_alias "alias push=\"git pull & git push -u\""
 add_alias "alias merge=\"git merge\""
-
-
+add_alias "alias r=\"ranger\""
 
 exec "$BASH"
 

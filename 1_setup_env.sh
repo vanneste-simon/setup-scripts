@@ -4,6 +4,9 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
+# install media codecs
+sudo apt-get install ubuntu-restricted-extras -y
+
 # install vim
 sudo apt-get install vim -y
 
@@ -42,6 +45,7 @@ add_alias "alias pull=\"git pull\""
 add_alias "alias push=\"git pull && git push -u\""
 add_alias "alias merge=\"git merge\""
 add_alias "alias r=\"ranger\""
+add_alias "alias py=\"python3\""
 
 exec "$BASH"
 

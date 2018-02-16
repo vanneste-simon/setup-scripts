@@ -27,6 +27,13 @@ cp config/.tmux.config ~/.tmux.config
 sudo apt-get install ranger caca-utils highlight atool w3m poppler-utils mediainfo -y
 cp -r config/ranger ~/.config
 
+# install sox
+sudo apt install sox -y
+sudo apt install libsox-fmt-all -y
+
+wget https://www.myinstants.com/media/sounds/hallelujahshort.swf.mp3
+mv hallelujahshort.swf.mp3 ~/Music/hallelujahshort.swf.mp3
+
 # setup the aliases
 touch ~/.bash_aliases
 
@@ -46,6 +53,7 @@ add_alias "alias push=\"git pull && git push -u\""
 add_alias "alias merge=\"git merge\""
 add_alias "alias r=\"ranger\""
 add_alias "alias py=\"python3\""
+add_alias "alias hallelujah=\"alert; play -V0 -q --buffer 16000 ~/Music/hallelujahshort.swf.mp3 &\""
 
 . ~/.bashrc
 

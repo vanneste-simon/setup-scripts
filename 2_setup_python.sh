@@ -22,8 +22,10 @@ sudo pip3 install --upgrade pip
 cp ~/.bashrc ~/.bachrc-org
 
 # adapt bachrc
-printf '\n%s\n%s\n%s' '# virtualenv' 'export WORKON_HOME=~/virtualenvs' \
-	'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+if ! grep -q "virtualenv" ~/.bash_aliases ; then
+	printf '\n%s\n%s\n%s' '# virtualenv' 'export WORKON_HOME=~/virtualenvs' \
+		'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+fi
 
 . ~/.bashrc
 

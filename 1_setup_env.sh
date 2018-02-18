@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# add ppa
+sudo add-apt-repository ppa:zeal-developers/ppa -y
+
 # Update system
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -9,6 +12,8 @@ sudo apt-get install ubuntu-restricted-extras -y
 
 # install vim
 sudo apt-get install vim -y
+cp config/.vimrc ~/.vimrc
+source ~/.vimrc
 
 # install tree
 sudo apt-get install tree -y
@@ -21,7 +26,7 @@ sudo apt-get install gparted -y
 
 # install tmux
 sudo apt-get install tmux -y
-cp config/.tmux.config ~/.tmux.config
+cp dotfiles/.tmux.config ~/.tmux.config
 
 # install ranger
 sudo apt-get install ranger caca-utils highlight atool w3m poppler-utils mediainfo -y
@@ -31,29 +36,24 @@ cp -r config/ranger ~/.config
 sudo apt install sox -y
 sudo apt install libsox-fmt-all -y
 
-wget https://www.myinstants.com/media/sounds/hallelujahshort.swf.mp3
-mv hallelujahshort.swf.mp3 ~/Music/hallelujahshort.swf.mp3
+if [ ! -f ~/Music/hallelujahshort.swf.mp3 ]; then
+	wget https://www.myinstants.com/media/sounds/hallelujahshort.swf.mp3
+	mv hallelujahshort.swf.mp3 ~/Music/hallelujahshort.swf.mp3
+fi
 
-# setup the aliases
-touch ~/.bash_aliases
+# install zsh
+sudo apt-get install zsh -y
 
+#get oh my zsh
+if [ ! -d ~/.oh-my-zsh ]; then
+	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 
-add_alias () {
-	if ! grep -q "$1" ~/.bash_aliases ; then
-		echo $1 >> ~/.bash_aliases
-	fi
-}
+# install zeal
+sudo apt-get install zeal -y
 
-# Add git aliases
-add_alias "alias s=\"git status\""
-add_alias "alias aa=\"git add --all\""
-add_alias "alias c=\"git commit -m\""
-add_alias "alias pull=\"git pull\""
-add_alias "alias push=\"git pull && git push -u\""
-add_alias "alias merge=\"git merge\""
-add_alias "alias r=\"ranger\""
-add_alias "alias py=\"python3\""
-add_alias "alias hallelujah=\"alert; play -V0 -q --buffer 16000 ~/Music/hallelujahshort.swf.mp3 &\""
+cp dotfiles/.bash_aliases ~/.bash_aliases
+cp dotfiles/.zshrc ~/.zshrc
 
 . ~/.bashrc
 

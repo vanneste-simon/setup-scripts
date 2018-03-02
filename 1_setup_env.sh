@@ -10,9 +10,12 @@ sudo apt-get upgrade -y
 # install media codecs
 sudo apt-get install ubuntu-restricted-extras -y
 
+# install curl
+sudo apt-get install curl -y
+
 # install vim
 sudo apt-get install vim -y
-cp config/.vimrc ~/.vimrc
+cp dotfiles/.vimrc ~/.vimrc
 source ~/.vimrc
 
 # install tree
@@ -30,7 +33,7 @@ cp dotfiles/.tmux.config ~/.tmux.config
 
 # install ranger
 sudo apt-get install ranger caca-utils highlight atool w3m poppler-utils mediainfo -y
-cp -r config/ranger ~/.config
+cp -r dotfiles/ranger ~/.config
 
 # install sox
 sudo apt install sox -y
@@ -47,6 +50,7 @@ sudo apt-get install zsh -y
 #get oh my zsh
 if [ ! -d ~/.oh-my-zsh ]; then
 	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 fi
 
 # install zeal

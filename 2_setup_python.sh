@@ -8,15 +8,15 @@ sudo apt-get upgrade -y
 sudo apt-get install -y python-pip
 sudo apt-get install -y python3-pip
 
+# update pip
+sudo pip install --upgrade pip
+sudo pip3 install --upgrade pip
+
 # install development tools
 sudo apt-get install build-essential libssl-dev libffi-dev python-dev -y
 
 # install virtualenv and wrapper
 sudo pip install virtualenv virtualenvwrapper
-
-# update pip
-sudo pip install --upgrade pip
-sudo pip3 install --upgrade pip
 
 # backup bashrc
 cp ~/.bashrc ~/.bachrc-org

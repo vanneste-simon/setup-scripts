@@ -13,6 +13,9 @@ sudo apt-get install ubuntu-restricted-extras -y
 # install curl
 sudo apt-get install curl -y
 
+# install ack
+sudo apt-get install ack-grep -y
+
 # install vim
 sudo apt-get install vim -y
 cp dotfiles/.vimrc ~/.vimrc

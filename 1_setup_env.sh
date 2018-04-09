@@ -48,13 +48,13 @@ if [ ! -f ~/Music/hallelujahshort.swf.mp3 ]; then
 fi
 
 # install zsh
-sudo apt-get install zsh -y
+#sudo apt-get install zsh -y
 
 #get oh my zsh
-if [ ! -d ~/.oh-my-zsh ]; then
-	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-fi
+#if [ ! -d ~/.oh-my-zsh ]; then
+#	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#	git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+#fi
 
 # install zeal
 sudo apt-get install zeal -y

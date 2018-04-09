@@ -1,0 +1,6 @@
+
+uncomment in 
+/etc/vim/vimrc
+
+uncomment section to jump to last position
+
